@@ -49,7 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Migrations\201904112047415_First.cs" />
+    <Compile Include="Migrations\201904112047415_First.Designer.cs">
+      <DependentUpon>201904112047415_First.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MyStockDbContext.cs" />
     <Compile Include="Configurations\OrderConfiguration.cs" />
     <Compile Include="Configurations\BrandConfiguration.cs" />
     <Compile Include="Configurations\CustomerConfiguration.cs" />
@@ -58,6 +63,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyStock.Common\MyStock.Common.csproj">
+      <Project>{bac80775-ed13-49aa-8886-3807e9eada4e}</Project>
+      <Name>MyStock.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyStock.Core\MyStock.Core.csproj">
       <Project>{28F17441-5A31-4ED6-B0EB-A6FC98CDE8A7}</Project>
       <Name>MyStock.Core</Name>
@@ -65,7 +74,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="appsettings.json" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904112047415_First.resx">
+      <DependentUpon>201904112047415_First.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

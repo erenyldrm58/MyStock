@@ -17,7 +17,6 @@ namespace MyStock.Core.Entities
         public string Address { get; set; }
         public decimal Dept { get; set; }
 
-        public virtual OrderEntity Order { get; set; }
         public virtual List<OrderEntity> OrderList { get; set; }
     }
 }

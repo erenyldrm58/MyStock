@@ -24,6 +24,6 @@ namespace MyStock.Core.Entities
 
         public virtual CustomerEntity Customer { get; set; }
         public virtual EmployeeEntity Employee { get; set; }
-        public List<ProductEntity> Product { get; set; }
+        public virtual List<ProductEntity> Product { get; set; }
     }
 }
